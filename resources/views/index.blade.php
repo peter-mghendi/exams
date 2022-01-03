@@ -13,16 +13,19 @@
     <div class="m-4">
         <ul class="bg-cyan-100 rounded-xl p-1.5 flex">
             @foreach ($categories as $key => $value)
-
             <li class="flex-1">
                 <buttton class="trigger w-100 block p-2 rounded-lg
                     text-sm font-medium text-cyan-700 capitalize 
-                    @if($loop->first) bg-white shadow-sm @endif"
-                    data-category="{{ $key }}">
+                    @if($loop->first) bg-white shadow-sm @endif" data-category="{{ $key }}">
                     {{ $key }}
-                </button>
+                    </button>
             </li>
             @endforeach
+            <li class="flex-1">
+                <a class="trigger w-100 block p-2 rounded-lg text-sm font-medium text-cyan-700" href="{{ route('new') }}">
+                    Create New Question
+                </a>
+            </li>
         </ul>
     </div>
     <div class="mx-4 mt-4">
@@ -67,4 +70,5 @@
         });
     });
 </script>
+
 </html>

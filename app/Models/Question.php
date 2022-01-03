@@ -17,6 +17,13 @@ class Question extends Model
     protected $table = 'exam';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['question', 'category', 'answer'];
+
+    /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
